@@ -1,5 +1,6 @@
-using Peliculas.Domain.Interface;
-using Peliculas.Domain.Service;
+
+using Peliculas.Application.Interface;
+using Peliculas.Application.Service;
 using Peliculas.Infraestructure.Adapters;
 using Peliculas.Infraestructure.Config;
 
@@ -44,9 +45,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 
