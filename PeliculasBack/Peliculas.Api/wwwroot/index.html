@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas (Evertec) </title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="navbar sombra">
+        <search-movies id="search"></search-movies>
+    </div>
+    <br>
+    <br>
+    <article class="content-movie">
+        <section class="movies-list sombra">
+            <list-movies id="moviesList" movies="[]"></list-movies>
+            <pagination-list id="pagination" total="0" ></pagination-list>
+        </section>
+        <section class="movie-select sombra display-none">
+            <div class="content-movie-view">
+                <div class="closed">
+                    <div>
+                        X
+                    </div>
+                </div>
+                <view-movie id="movieView" movie="{}"></view-movie>
+            </div>
+        </section>
+    </article>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
