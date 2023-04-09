@@ -1,8 +1,8 @@
-﻿using Peliculas.Domain.DTOs;
-using Peliculas.Domain.DTOs.ResponseById;
-using Peliculas.Domain.DTOs.ResponseByNameList;
+﻿using Peliculas.Application.DTOs;
+using Peliculas.Application.DTOs.ResponseById;
+using Peliculas.Application.DTOs.ResponseByNameList;
 
-namespace Peliculas.Domain.Interface
+namespace Peliculas.Application.Interface
 {
     public interface ISearchOmdbApiService
     {

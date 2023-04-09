@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Peliculas.Domain\Peliculas.Domain.csproj" />
+    <ProjectReference Include="..\Peliculas.Application\Peliculas.Application.csproj" />
+    <ProjectReference Include="..\Peliculas.Domain\Peliculas.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using Peliculas.Domain.DTOs.ResponseById;
-using Peliculas.Domain.DTOs.ResponseByNameList;
-using Peliculas.Domain.Interface;
+using Peliculas.Application.DTOs.ResponseById;
+using Peliculas.Application.DTOs.ResponseByNameList;
+using Peliculas.Application.Interface;
 using Peliculas.Infraestructure.Config;
 
 namespace Peliculas.Infraestructure.Adapters

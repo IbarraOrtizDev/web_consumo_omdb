@@ -1,4 +1,4 @@
-﻿namespace Peliculas.Domain.DTOs
+﻿namespace Peliculas.Application.DTOs
 {
     public class SearchOmdbApiByNameDto
     {

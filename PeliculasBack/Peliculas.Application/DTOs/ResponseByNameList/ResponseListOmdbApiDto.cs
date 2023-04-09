@@ -1,4 +1,4 @@
-﻿namespace Peliculas.Domain.DTOs.ResponseByNameList
+﻿namespace Peliculas.Application.DTOs.ResponseByNameList
 {
     public class ResponseListOmdbApiDto
     {

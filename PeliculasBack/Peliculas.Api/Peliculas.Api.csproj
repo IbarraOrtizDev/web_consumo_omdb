@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Peliculas.Application\Peliculas.Application.csproj" />
-    <ProjectReference Include="..\Peliculas.Domain\Peliculas.Domain.csproj" />
     <ProjectReference Include="..\Peliculas.Infraestructure\Peliculas.Infraestructure.csproj" />
   </ItemGroup>
 
