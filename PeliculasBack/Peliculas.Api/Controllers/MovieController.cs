@@ -8,7 +8,7 @@ using Peliculas.Application.Interface;
 namespace Peliculas.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class MovieController : Controller
     {
         private readonly ISearchOmdbApiService _searchOmdbApiService;
