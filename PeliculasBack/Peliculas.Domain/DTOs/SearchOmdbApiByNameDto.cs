@@ -2,7 +2,7 @@
 {
     public class SearchOmdbApiByNameDto
     {
-        public string moviName { get; set; } = String.Empty;
+        public string movieName { get; set; } = String.Empty;
         public int page { get; set; } = 1;
     }
 }

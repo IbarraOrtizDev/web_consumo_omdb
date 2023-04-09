@@ -22,7 +22,7 @@ namespace Peliculas.Domain.Service
 
         public async Task<ResponseListOmdbApiDto> SearchMoviesByName(SearchOmdbApiByNameDto parameterQueryByName)
         {
-            var uriComplement = "&s=" + parameterQueryByName.moviName+"&page="+parameterQueryByName.page;
+            var uriComplement = "&s=" + parameterQueryByName.movieName+"&page="+parameterQueryByName.page;
 
             return await _omdbRepository.SearchByName(uriComplement);
         }
