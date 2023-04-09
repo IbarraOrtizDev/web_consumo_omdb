@@ -73,7 +73,6 @@ export class ListMovies extends HTMLElement{
         let btn = this.getAttribute('btn')
         this.verBtn = true
         if(btn !== null && btn === "0"){
-            console.log('r')
             this.verBtn = false
         }
         this.listMovies = [];
