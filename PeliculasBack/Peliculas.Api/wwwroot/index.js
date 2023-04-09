@@ -2,6 +2,8 @@ import * as inputSearch from './Components/input-search.js'
 import * as listMovies from './Components/list-movies.js' 
 import * as viewMovieEl from './Components/view-movie.js' 
 import * as paginationList from './Components/pagination-list.js';
+import * as myListElement from './Components/my-list.js';
+
 import QueryApi  from './Services/query.js'
 let listaPeliculas = {}
 let viewMovie = {}
@@ -14,6 +16,8 @@ let page = 1;
  let paginationElement = document.getElementById('pagination')
  let search = document.getElementById('search')
  let closed = document.querySelector('.closed')
+ let btnList = document.getElementById('btnViewList')
+ let myList = document.getElementById('myList')
 
  paginationElement.setAttribute('total', listaPeliculas.totalResults)
  moviesList.setAttribute("movies", JSON.stringify(listaPeliculas.Search))
@@ -27,9 +31,17 @@ let page = 1;
     buscarById(event.detail)
  })
 
+ myList.addEventListener('ver-todo', (event)=>{
+    buscarById(event.detail)
+ })
+
  search.addEventListener('search-movie', (event)=>{
     name = event.detail
     buscarMovieByName()
+ })
+
+ btnList.addEventListener('click', ()=>{
+    document.getElementById('myList').setAttribute('show','1')
  })
 
  closed.addEventListener('click', ()=>{

@@ -1,5 +1,6 @@
 export class PaginationList extends HTMLElement{
     style = /*css*/`
+        
         .flex{
             display:flex;
             gap:10px;
@@ -23,6 +24,9 @@ export class PaginationList extends HTMLElement{
             color:white;
             cursor:none !important
         }
+        .sombra{
+            box-shadow: 0px 3px 5px 3px #E0E0E0;
+        }
     `
     constructor(){
         super()
@@ -36,8 +40,8 @@ export class PaginationList extends HTMLElement{
 
     attributeChangedCallback(name, oldValue, newValue) {
         if(name === "total"){
-            this.total= parseInt(newValue)
-            this.numPages = Math.ceil(this.total/10)
+            this.total= newValue === 'undefined' ? 0 : parseInt(newValue)
+            this.numPages = this.total === 0 ? 1 : Math.ceil(this.total/10)
             this.ordenar()
         }
         
@@ -46,13 +50,13 @@ export class PaginationList extends HTMLElement{
         let data = /*html*/`
             <style>${this.style}</style>
             <div class="flex content-btn">
-                <div id="reduce">
+                <div class="sombra" id="reduce">
                     <svg style="width:25px" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><title/><path d="M39.3756,48.0022l30.47-25.39a6.0035,6.0035,0,0,0-7.6878-9.223L26.1563,43.3906a6.0092,6.0092,0,0,0,0,9.2231L62.1578,82.615a6.0035,6.0035,0,0,0,7.6878-9.2231Z"/></svg>
                 </div>
-                <div id="first">${1}</div>
-                <div class="actualy">${this.actual}</div>
-                <div id="end">${this.numPages}</div>
-                <div id="add">
+                <div  class="sombra" id="first">${1}</div>
+                <div  class="actualy sombra">${this.actual}</div>
+                <div  class="sombra" id="end">${this.numPages??1}</div>
+                <div  class="sombra" id="add">
                     <svg style="width:25px" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><title/><path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"/></svg>
                 </div>
             </div>

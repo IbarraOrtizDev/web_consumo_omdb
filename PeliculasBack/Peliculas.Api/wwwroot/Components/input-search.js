@@ -10,7 +10,7 @@ export class InputSearch extends HTMLElement{
             *{
                 margin: 0px;
                 padding:0px;
-                font-size: 18px;
+                font-size: 16px;
                 font-family: Arial, Helvetica, sans-serif;
                 letter-spacing: 0.5px;
             }
@@ -34,6 +34,8 @@ export class InputSearch extends HTMLElement{
                 align-items: center;
                 height: 100%;
                 width: 100%;
+                padding: 0px 10px;
+                box-sizing: border-box;
             }
             .icon-search{
                 background-color: white;
